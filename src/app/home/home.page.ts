@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public router:Router
+  ) {}
 
+  goToApp1() {
+    this.router.navigateByUrl('app1');
+  }
+  goToApp2() {
+    this.router.navigateByUrl('app2');
+  }
+  
 }
