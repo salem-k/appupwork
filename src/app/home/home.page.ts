@@ -12,11 +12,13 @@ export class HomePage {
     public router:Router
   ) {}
 
-  goToApp1() {
+  icon1(){
     this.router.navigateByUrl('app1');
   }
-  goToApp2() {
+  icon2(){
     this.router.navigateByUrl('app2');
   }
-  
+  icon3(){
+    this.router.navigateByUrl('app3');
+  }
 }

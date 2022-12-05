@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title [routerLink]="['/home']">Back</ion-title>
+    <ion-button [routerLink]="['/home']"><</ion-button>
+    <ion-title>Currency Rates</ion-title>
+
   </ion-toolbar>
 </ion-header>
-
+<div class="currencies">
+  <div class="currency1">{{currency1}}</div>
+  <img class="fleche" src="/assets/currencyicon1.png" />
+  <div class="currency2">{{currency2}}</div>
+</div>
 <ion-content>
+  <ul *ngIf="loaded">
+    <li *ngFor="let currency of list_currency">
+
+      {{currency[0]}} - {{currency[1]}}
+    </li>
+  </ul>
+
 
 </ion-content>
