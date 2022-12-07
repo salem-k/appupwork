@@ -1,21 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Mini Programs
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <div id="container">
-    <img (click)="icon1()" src="/assets/icon1.png"  class="icon1" />
-    <img (click)="icon2()" src="/assets/icon2.png"  class="icon2" />
-    <img (click)="icon3()" src="/assets/icon3.png"  class="icon3" />
-  </div>
+
+  <span *ngFor="let app of results; let index = index;">
+    <img (click)="icon(index)" [src]="app.img"  class="icon" />
+    <br>
+    <label>{{app.name}}</label>
+  </span>
+
 </ion-content>
+<ion-footer>
+  
+  <ion-searchbar  (ionChange)="handleChange($event)"  search-icon="search-circle" placeholder="Search Mini Programs"></ion-searchbar>
+
+</ion-footer>

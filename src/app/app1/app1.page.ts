@@ -13,6 +13,7 @@ export class App1Page implements OnInit {
   loaded=false
   currency1:any
   currency2:any
+  result:any
   constructor(
     private http: HttpClient,
     private loadingCtrl: LoadingController,
@@ -20,30 +21,30 @@ export class App1Page implements OnInit {
   ) { }
 
   async ngOnInit() {
-    const loading = await this.loadingCtrl.create({
-      message: 'Loading ...',
-      duration: 3000,
-    });
-
-    loading.present();
-
+  }
+  async loadCurrency(currency:any) {
+    this.currency1 = currency
+    this.getCurrency()
+  }
+  loadCurrency2(currency:any) {
+    this.currency2 = currency
+    this.getCurrency()
     
-
-    const headers = { 'apikey': 'ZR5PWI8zKKPJiatKrApNa9SUiBnTqsMA'}  
-    console.log(headers)
-    this.http.get("https://api.apilayer.com/currency_data/list",{'headers':headers}).subscribe((data:any)=>{
-      console.log(data);
-      
-      
-      
-
-      this.list_currency=this.forObjectPipe.transform(data.currencies)
-      this.loaded = true
-      loading.dismiss()
-
-      
-      
-    })
-
+  }
+  async getCurrency(){
+    if(this.currency1 != "" && this.currency2 != "" ) {
+      const loading = await this.loadingCtrl.create({
+        message: 'Loading ...',
+        duration: 3000,
+      });
+  
+      loading.present();
+      const headers = { 'apikey': 'ZR5PWI8zKKPJiatKrApNa9SUiBnTqsMA'}  
+      this.http.get("https://api.apilayer.com/fixer/convert?to="+this.currency2+"&from="+this.currency1+"&amount=1",{'headers':headers}).subscribe((data:any)=>{
+        console.log(data);
+        this.result = data.result
+        loading.dismiss()
+      })
+    }
   }
 }

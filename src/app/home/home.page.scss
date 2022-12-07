@@ -26,18 +26,46 @@
   text-decoration: none;
 }
 
-.icon1{
-  width: 110px;
-  height: 110px;
-  margin: 15px;
+.icon{
+  margin: 10px;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0px;
 }
-.icon2{
-  width: 110px;
-  height: 110px;
-  margin: 15px;
+ion-toolbar{
+  text-align: center;
+  --background: #c9c9ce!important;
 }
-.icon3{
-  width: 110px;
-  height: 110px;
-  margin: 15px;
+ion-content{
+  --background: white;
+}
+ion-title{
+  color:black;
+}
+ion-searchbar{
+  --background: white;
+  --border-radius: 19px!important;
+}
+.sc-ion-searchbar-md-h{
+  --color: black!important;
+  --ion-text-color: black!important;
+}
+ion-footer{
+  --background:#c9c9ce!important;
+  background:#c9c9ce!important;
+}
+ion-content{
+  overflow: hidden;
+}
+ion-content div{
+  overflow: hidden;
+  float: left;
+  text-align: center;
+}
+ion-content span{
+  overflow: hidden;
+  float: left;
+  color:black;
+  text-align: center;
+  font-size: 13px;
 }

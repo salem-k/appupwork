@@ -7,6 +7,10 @@
     width: 120px;
     margin: 0 auto;
     display: block;
+    float: left;
+    margin-left: -140px;
+    left: 50%;
+    position: relative;
 }
 .currency1{
     float: left;
@@ -14,6 +18,10 @@
     padding: 10px;
     height: 60px;
     width:80px;
+    COLOR: black;
+    text-align: center;
+    font-weight: bold;
+    padding-top:20px;
 }
 .currency2{
     float: right;
@@ -21,5 +29,30 @@
     padding: 10px;
     height: 60px;
     width:80px;
-    margin-top:-60px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding-top:20px;
+}
+table{
+    width:100%;
+    color:black;
+    border:1px solid black;
+}
+td{
+    padding:18px;
+    border:1px solid black;
+}
+td label{
+    font-weight: bold;
+    font-size: 24px;
+}
+ion-content{
+    background: white!important;
+    --ion-background: white!important;
+    --ion-background-color: white!important;
+}
+.hover{
+    background-color: black;
+    color:white;
 }
