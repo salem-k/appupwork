@@ -29,7 +29,7 @@ export class HomePage {
   }
 
   icon(index:any) {
-    this.router.navigateByUrl(index+1);
+    this.router.navigateByUrl("app"+(index+1));
   }
 
   handleChange(event:any) {
