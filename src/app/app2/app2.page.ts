@@ -43,6 +43,8 @@ export class App2Page implements OnInit {
       case '*': 
       return this.firstOperand *= secondOp; 
       case '/': 
+      return this.firstOperand /= secondOp;
+      case '%': 
       return this.firstOperand /= secondOp; 
       case '=':
       return secondOp;

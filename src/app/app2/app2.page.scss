@@ -80,6 +80,12 @@
     border-radius: 42px;
     color:white;
   }
+  .number0{
+    background-color:#333333;
+    border-radius: 42px;
+    color:white;
+    width: 120px;
+  }
   .topButton{
     background-color: #a6a6a6;
     border-radius: 42px!important;
@@ -89,5 +95,9 @@
   ion-title{
     text-align: center!important;
     margin-bottom: 13px!important;
+}
+ion-toolbar{
+  text-align: center;
+  --background: #c9c9ce!important;
 }
   
