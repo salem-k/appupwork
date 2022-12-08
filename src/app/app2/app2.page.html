@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-button [routerLink]="['/home']"><</ion-button>
+    <br>
     <ion-title>Calculator</ion-title>
 
   </ion-toolbar>
@@ -17,37 +18,40 @@
 
 
 
-    <button type="button" (click) = "clear()"  class="all-clear topButton" value="all-clear">AC</button>    
+    <button style="width: 62px;" type="button" (click) = "clear()"  class="all-clear topButton" value="all-clear">AC</button>    
     <button type="button" (click) = "getOperation('%')" class="number" value="%">%</button>    
     <button type="button" (click) = "getOperation('%')" class="number" value="%">%</button>    
     
 
     <button type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
-    <br>
-    <button type="button" (click) = "getNumber('7')" class="number" value="7">7</button>
+    
+    <button type="button" (click) = "getNumber('7')" class="number" value="7" style="width: 60px;">7</button>
     <button type="button" (click) = "getNumber('8')" class="number" value="8">8</button>
     <button type="button" (click) = "getNumber('9')" class="number" value="9">9</button>
     
     <button type="button" (click) = "getOperation('*')" class="operator" value="*">&times;</button>
-    <br>
-    <button type="button" (click) = "getNumber('4')" class="number" value="4">4</button>
+    
+
+    <button type="button" (click) = "getNumber('4')" class="number" value="4"  style="width: 60px;">4</button>
     <button type="button" (click) = "getNumber('5')" class="number" value="5">5</button>
     <button type="button" (click) = "getNumber('6')" class="number" value="6">6</button>
 
     <button type="button" (click) = "getOperation('-')" class="operator" value="-">-</button>
-    <br>
-    <button type="button" (click) = "getNumber('1')" class="number" value="1">1</button>
+
+    
+
+    <button type="button" (click) = "getNumber('1')" class="number" value="1"  style="width: 60px;">1</button>
     <button type="button" (click) = "getNumber('2')" class="number" value="2">2</button>
     <button type="button" (click) = "getNumber('3')" class="number" value="3">3</button>
     <button type="button" (click) = "getOperation('+')" class="operator" value="+">+</button>
 
 
 
-    <br>
+    
     
     <button type="button" class="number0" (click) = "getNumber('0')" value="0">0</button>
-    <button type="button" (click) = "getDecimal()" class="number" value=".">.</button>
-    <button type="button" (click) = "getOperation('=')" class="operator" value="=">=</button>
+    <button type="button" (click) = "getDecimal()" class="number point" value=".">.</button>
+    <button type="button" (click) = "getOperation('=')" class="operator operatoregal" value="=">=</button>
 
   </div>
 </div>
