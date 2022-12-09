@@ -45,12 +45,19 @@ export class App2Page implements OnInit {
       case '/': 
       return this.firstOperand /= secondOp;
       case '%': 
-      return this.firstOperand %= secondOp; 
+      return this.firstOperand / (secondOp * 100);
+      case '-+':
+      let resultt = Number(this.firstOperand)
+      this.firstOperand =  -1 * resultt
+      this.currentNumber = -1 * resultt
+      return -1 * resultt;
       case '=':
       return secondOp;
     }
   }
   public getOperation(op: string){
+    if(op=="-+")
+    this.operator = op
     console.log(op);
 
     if(this.firstOperand === null){
@@ -58,7 +65,7 @@ export class App2Page implements OnInit {
 
     }else if(this.operator){
       const result = this.doCalculation(this.operator , Number(this.currentNumber))
-      this.currentNumber = String(result);
+      this.currentNumber = Number(result);
       this.firstOperand = result;
     }
     this.operator = op;

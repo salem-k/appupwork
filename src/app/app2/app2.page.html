@@ -12,15 +12,10 @@
   <input type="text" class="calculator-screen" [value]="currentNumber" disabled />
   
   <div class="calculator-keys">
-    
-    
 
-
-
-
-    <button style="width: 62px;" type="button" (click) = "clear()"  class="all-clear topButton" value="all-clear">AC</button>    
-    <button type="button" (click) = "getOperation('%')" class="number" value="%">%</button>    
-    <button type="button" (click) = "getOperation('%')" class="number" value="%">%</button>    
+    <button style="width: 62px;font-size: 25px;" type="button" (click) = "clear()"  class="all-clear topButton" value="all-clear">AC</button>    
+    <button type="button"  class="number topButton" value="%" style="opacity: 0;">%</button>    
+    <button type="button" class="topButton" value="-+" style="opacity: 0;width:60px ;height: 60px;box-shadow:none;border:none;background:url('/assets/plusmoin.png');background-size: contain;color: transparent;">-+</button>
     
 
     <button type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
