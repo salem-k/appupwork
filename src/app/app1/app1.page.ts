@@ -39,12 +39,44 @@ export class App1Page implements OnInit {
       });
   
       loading.present();
-      const headers = { 'apikey': 'ZR5PWI8zKKPJiatKrApNa9SUiBnTqsMA'}  
-      this.http.get("https://api.apilayer.com/fixer/convert?to="+this.currency2+"&from="+this.currency1+"&amount=1",{'headers':headers}).subscribe((data:any)=>{
+      const headers = { 'apikey': 'ZR5PWI8zKKPJiatKrApNa9SUiBnTqsMA'}
+
+      
+
+
+      if(this.currency1&&this.currency2){
+
+      
+      this.http.get("https://api.fastforex.io/convert?from="+this.currency1+"&to="+this.currency2+"&amount=1&api_key=12391f8d37-b95b1d6635-rmmdhg",{'headers':headers}).subscribe((data:any)=>{
         console.log(data);
-        this.result = data.result
+        this.result = data.result.rate
+
         loading.dismiss()
       })
+      }else{
+        loading.dismiss()
+      }
+    }
+  }
+
+  async changeDirection() {
+    const headers = { 'apikey': 'ZR5PWI8zKKPJiatKrApNa9SUiBnTqsMA'}
+    const loading = await this.loadingCtrl.create({
+      message: 'Loading ...',
+      duration: 3000,
+    });
+    let temp=this.currency2
+    this.currency2 = this.currency1
+    this.currency1 = temp
+    
+    if(this.currency1&&this.currency2){
+    this.http.get("https://api.fastforex.io/convert?from="+this.currency2+"&to="+this.currency1+"&amount=1&api_key=12391f8d37-b95b1d6635-rmmdhg",{'headers':headers}).subscribe((data:any)=>{
+      console.log(data);
+      this.result = data.result.rate
+      loading.dismiss()
+    })
+    }else{
+      loading.dismiss()
     }
   }
 }

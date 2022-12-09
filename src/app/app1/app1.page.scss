@@ -4,13 +4,14 @@
     overflow: hidden;
 }
 .fleche{
-    width: 120px;
+    width: 80px;
     margin: 0 auto;
     display: block;
     float: left;
-    margin-left: -140px;
+    margin-left: -125px;
     left: 50%;
     position: relative;
+    margin-top: 12px;
 }
 .currency1{
     float: left;
@@ -40,7 +41,7 @@ table{
     border:1px solid black;
 }
 td{
-    padding:18px;
+    padding:10px;
     border:1px solid black;
 }
 td label{

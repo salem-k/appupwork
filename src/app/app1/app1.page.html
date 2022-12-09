@@ -7,7 +7,7 @@
 </ion-header>
 <div class="currencies">
   <div class="currency1">1</div>
-  <img class="fleche" src="/assets/currencyicon1.png" />
+  <img class="fleche" src="/assets/currencyicon1.png" (click)="changeDirection()" />
   <div class="currency2">{{result}}</div>
 </div>
 <ion-content>
@@ -40,7 +40,7 @@
       <td [ngClass]="{'hover': currency2 === 'KWD'}"  class="KWD2"(click)="loadCurrency2('KWD')"><label>KWD</label> Kuwaiti Dinar</td>
     </tr>
     <tr>
-      <td [ngClass]="{'hover': currency1 === 'LBP'}"  [ngClass]="{'hover': currency1 === 'LBP'}" class="LBP" (click)="loadCurrency('LBP')" class="td1"><label>LBP</label> Lebanese Pound</td>
+      <td [ngClass]="{'hover': currency1 === 'LBP'}"  class="LBP" (click)="loadCurrency('LBP')" class="td1"><label>LBP</label> Lebanese Pound</td>
       <td [ngClass]="{'hover': currency2 === 'LBP'}"  class="LBP2" (click)="loadCurrency2('LBP')"><label>LBP</label> Lebanese Pound</td>
     </tr>
     <tr>
@@ -54,6 +54,11 @@
     <tr>
       <td [ngClass]="{'hover': currency1 === 'RUB'}" class="RUB" (click)="loadCurrency('RUB')" class="td1"><label>RUB</label> Russian Ruble</td>
       <td [ngClass]="{'hover': currency2 === 'RUB'}"  class="RUB2" (click)="loadCurrency2('RUB')"><label>RUB</label> Russian Ruble</td>
+    </tr>
+    <tr>
+      
+      <td  [ngClass]="{'hover': currency1 === 'EGP'}" class="EGP2" (click)="loadCurrency('EGP')"><label>EGP</label> Egyptian Ppound</td>
+      <td [ngClass]="{'hover': currency2 === 'USD'}" class="EGP" (click)="loadCurrency2('USD')" class="td1"><label>USD</label> USD Dollar</td>
     </tr>
   </table>
 </ion-content>
