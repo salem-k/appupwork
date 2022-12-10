@@ -26,6 +26,7 @@
     "cordova-android": "^11.0.0",
     "cordova-ios": "^6.2.0",
     "ionicons": "^6.0.3",
+    "protractor": "^7.0.0",
     "rxjs": "^7.5.7",
     "rxjs-compat": "^6.6.7",
     "tslib": "^2.4.1",

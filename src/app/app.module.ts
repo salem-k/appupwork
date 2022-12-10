@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ForObjectPipe } from './pipe.service';
 
+
+
 @NgModule({
   declarations: [AppComponent,ForObjectPipe],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
